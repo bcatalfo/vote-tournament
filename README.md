@@ -18,4 +18,4 @@ Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Islan
 
 # Check it out
 
-[Vote Tournament](votetournament.com)
+[Vote Tournament](http://votetournament.com)
