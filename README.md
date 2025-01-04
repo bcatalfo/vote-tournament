@@ -15,3 +15,7 @@ Let's say our potential band names are the following:
 9. Genetic Apex: Charizard
 
 Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Island vs Magical Journey, eventually the winner of Third Space vs Rum Punches will go against the winner of Mythical Island vs Magical Journyey, etc.
+
+# Check it out
+
+[Vote Tournament](votetournament.com)
