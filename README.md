@@ -1,4 +1,4 @@
-# Voting Tournament
+# Vote Tournament
 
 Basically we're gonna use this web app to come up with a band name.
 
