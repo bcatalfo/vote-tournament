@@ -18,7 +18,7 @@ export function Welcome() {
   ));
   return (
     <main>
-      <div className="w-fit mx-auto my-auto py-4">
+      <div className="container mx-auto my-auto py-4">
         <h1>Vote Tournament</h1>
         <ul>{candidates}</ul>
       </div>
