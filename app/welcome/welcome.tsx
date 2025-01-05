@@ -18,8 +18,10 @@ export function Welcome() {
   ));
   return (
     <main>
-      <h1>Vote Tournament</h1>
-      <ul>{candidates}</ul>
+      <div className="w-fit mx-auto my-auto py-4">
+        <h1>Vote Tournament</h1>
+        <ul>{candidates}</ul>
+      </div>
     </main>
   );
 }
