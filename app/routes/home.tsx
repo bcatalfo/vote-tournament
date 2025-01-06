@@ -1,10 +1,13 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Welcome } from "../components/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Vote Tournament" },
-    { name: "description", content: "Make your next decision democratically with Vote Tournament." },
+    {
+      name: "description",
+      content: "Make your next decision democratically with Vote Tournament.",
+    },
   ];
 }
 
