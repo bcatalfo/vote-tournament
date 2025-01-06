@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../components/welcome";
+import MakeTournament from "~/components/make-tournament";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,5 +13,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <MakeTournament />;
 }
