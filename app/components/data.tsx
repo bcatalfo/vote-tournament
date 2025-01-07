@@ -20,35 +20,39 @@ export const bandNamesData = [
     id: 5,
   },
   {
-    name: "Mythical Island",
+    name: "Sam and the PogStqs",
     id: 6,
   },
   {
-    name: "Magical Journey",
+    name: "Mythical Island",
     id: 7,
   },
   {
-    name: "Common Area",
+    name: "Magical Journey",
     id: 8,
   },
   {
-    name: "The Martians",
+    name: "Common Area",
     id: 9,
   },
   {
-    name: "The Mumblos",
+    name: "The Martians",
     id: 10,
   },
   {
-    name: "Fruitless Pursuit",
+    name: "The Mumblos",
     id: 11,
   },
   {
-    name: "Genetic Apex: Charizard",
+    name: "Fruitless Pursuit",
     id: 12,
   },
   {
-    name: "The Bagooleans",
+    name: "Genetic Apex: Charizard",
     id: 13,
+  },
+  {
+    name: "The Bagooleans",
+    id: 14,
   },
 ];
