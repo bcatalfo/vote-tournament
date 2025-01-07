@@ -10,7 +10,7 @@ export default function MakeTournament() {
   ));
   return (
     <div className="container mx-auto my-auto py-4 text-center">
-      <h1>Vote Tournament</h1>
+      <h1>What to name our band?</h1>
       <ul>{bandNamesList}</ul>
     </div>
   );
