@@ -13,5 +13,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <MakeTournament />;
+  return (
+    <main>
+      <Welcome />
+    </main>
+  );
 }

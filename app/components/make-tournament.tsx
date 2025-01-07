@@ -9,11 +9,9 @@ export default function MakeTournament() {
     </li>
   ));
   return (
-    <main>
-      <div className="container mx-auto my-auto py-4 text-center">
-        <h1>Vote Tournament</h1>
-        <ul>{bandNamesList}</ul>
-      </div>
-    </main>
+    <div className="container mx-auto my-auto py-4 text-center">
+      <h1>Vote Tournament</h1>
+      <ul>{bandNamesList}</ul>
+    </div>
   );
 }
