@@ -43,4 +43,8 @@ export const bandNamesData = [
     name: "Genetic Apex: Charizard",
     id: 11,
   },
+  {
+    name: "The Bagooleans",
+    id: 12,
+  },
 ];
