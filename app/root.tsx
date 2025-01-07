@@ -2,6 +2,7 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -34,7 +35,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <nav className="space-x-4 p-4">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/make-tournament">Make a tournament</NavLink>
+        </nav>
+        <main>{children}</main>
         <ScrollRestoration />
         <Scripts />
       </body>
