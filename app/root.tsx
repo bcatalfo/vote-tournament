@@ -36,8 +36,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <nav className="space-x-4 p-4">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/make-tournament">Make a tournament</NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive, isPending, isTransitioning }) =>
+              [isActive ? "underline" : ""].join("")
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/make-tournament"
+            className={({ isActive, isPending, isTransitioning }) =>
+              [isActive ? "underline" : ""].join("")
+            }
+          >
+            Make a tournament
+          </NavLink>
         </nav>
         <main>{children}</main>
         <ScrollRestoration />
