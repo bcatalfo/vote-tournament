@@ -13,7 +13,7 @@ export default function MakeTournament() {
         />
         <button className="p-2"> Add </button>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center py-4">
         <ul>
           {bandNamesData.map((candidate) => (
             <Candidate name={candidate.name} id={candidate.id.toString()} />
