@@ -4,6 +4,8 @@ export default function Candidate({ name, id }: { name: string; id: string }) {
       <li key={id}>
         <p>
           <b>{name}</b>
+          <button> Edit </button>
+          <button> X </button>
         </p>
       </li>
     </div>
