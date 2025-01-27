@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Candidate from "./candidate";
 import { bandNamesData } from "./data";
 
 export default function MakeTournament() {
+  const [candidateData, setCandidateData] = useState(bandNamesData);
+  var nextId = candidateData.length + 1;
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
       <h1 className="text-xl p-4 font-bold">What to name our band?</h1>
@@ -11,11 +14,21 @@ export default function MakeTournament() {
           className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
           placeholder="Type your suggestion here..."
         />
-        <button className="p-2"> Add </button>
+        <button
+          className="p-2"
+          onClick={() =>
+            setCandidateData([
+              ...candidateData,
+              { id: nextId++, name: "new thing!" },
+            ])
+          }
+        >
+          Add
+        </button>
       </div>
       <div className="flex flex-col items-center py-4">
         <ul>
-          {bandNamesData.map((candidate) => (
+          {candidateData.map((candidate) => (
             <Candidate name={candidate.name} id={candidate.id.toString()} />
           ))}
         </ul>
