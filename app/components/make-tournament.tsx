@@ -4,7 +4,7 @@ import { bandNamesData } from "./data";
 export default function MakeTournament() {
   return (
     <div className="container mx-auto my-auto py-4 text-center">
-      <h1>What to name our band?</h1>
+      <h1 className="text-xl p-8 font-bold">What to name our band?</h1>
       <div className="flex flex-col items-center">
         <ul>
           {bandNamesData.map((candidate) => (
