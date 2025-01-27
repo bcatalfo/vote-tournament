@@ -4,7 +4,7 @@ export default function Candidate({ name, id }: { name: string; id: string }) {
       <li key={id}>
         <p className="flex flex-row ">
           <button> X </button>
-          <b className="flex-grow">{name}</b>
+          <b className="flex-grow p-4">{name}</b>
           <button> Edit </button>
         </p>
       </li>
