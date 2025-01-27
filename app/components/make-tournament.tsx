@@ -28,7 +28,7 @@ export default function MakeTournament() {
       </div>
       <div className="flex flex-col items-center py-4">
         <ul>
-          {candidateData.map((candidate) => (
+          {candidateData.toReversed().map((candidate) => (
             <Candidate name={candidate.name} id={candidate.id.toString()} />
           ))}
         </ul>
