@@ -23,25 +23,28 @@ export default function MakeTournament() {
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
       <Question props={props}></Question>
-      <div className="w-1/4 flex py-4">
-        <input
-          type="text"
-          className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
-          value={suggestion}
-          onChange={(e) => setSuggestion(e.target.value)}
-          placeholder="Type your suggestion here..."
-        />
-        <button
-          className="p-2"
-          onClick={() =>
-            setCandidateData([
-              ...candidateData,
-              { id: nextId++, name: suggestion },
-            ])
-          }
-        >
-          Add
-        </button>
+      <div className="w-1/4 flex flex-col items-start p-4">
+        <h2 className="px-4 text-xl">Add options</h2>
+        <div className="flex px-4 w-full">
+          <input
+            type="text"
+            className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
+            value={suggestion}
+            onChange={(e) => setSuggestion(e.target.value)}
+            placeholder="Type your idea here..."
+          />
+          <button
+            className="p-2"
+            onClick={() =>
+              setCandidateData([
+                ...candidateData,
+                { id: nextId++, name: suggestion },
+              ])
+            }
+          >
+            Add
+          </button>
+        </div>
       </div>
       <div className="grid grid-cols-1 gap-4 items-center py-4">
         {candidateData.toReversed().map((candidate) => (
