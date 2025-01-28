@@ -7,7 +7,7 @@ var nextId = bandNamesData.length + 1;
 
 export default function MakeTournament() {
   const [candidateData, setCandidateData] = useState(bandNamesData);
-  const [editingQuestion, setEditingQuestion] = useState(true);
+  const [editingQuestion, setEditingQuestion] = useState(false);
   const [questionName, setQuestionName] = useState("What to name our band");
 
   return (
@@ -15,6 +15,7 @@ export default function MakeTournament() {
       <Question
         questionName={questionName}
         editingQuestion={editingQuestion}
+        editCallback={() => setEditingQuestion(true)}
       ></Question>
       <div className="w-1/4 flex py-4">
         <input
