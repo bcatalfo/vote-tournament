@@ -7,7 +7,7 @@ var nextId = bandNamesData.length + 1;
 
 export default function MakeTournament() {
   const [candidateData, setCandidateData] = useState(bandNamesData);
-  const [editingQuestion, setEditingQuestion] = useState(false);
+  const [editingQuestion, setEditingQuestion] = useState(true);
   const [questionName, setQuestionName] = useState("What to name our band");
 
   return (
