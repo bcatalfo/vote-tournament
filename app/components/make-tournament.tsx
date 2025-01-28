@@ -34,7 +34,12 @@ export default function MakeTournament() {
         {candidateData.toReversed().map((candidate) => (
           <Candidate
             name={candidate.name}
-            deleteCallback={() => alert("Delete " + candidate.id)}
+            key={candidate.id}
+            deleteCallback={() =>
+              setCandidateData(
+                candidateData.filter(({ name, id }) => id != candidate.id)
+              )
+            }
           />
         ))}
       </div>
