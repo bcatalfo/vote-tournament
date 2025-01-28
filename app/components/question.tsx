@@ -37,8 +37,11 @@ function QuestionBody({ props }: { props: QuestionProps }) {
 
 export default function Question({ props }: { props: QuestionProps }) {
   return (
-    <div className="flex flex-row items-stretch">
-      <QuestionBody props={props}></QuestionBody>
+    <div className="flex flex-col items-start">
+      <h2 className="px-4 text-xl">Title</h2>
+      <div className="flex flex-row items-stretch">
+        <QuestionBody props={props}></QuestionBody>
+      </div>
     </div>
   );
 }
