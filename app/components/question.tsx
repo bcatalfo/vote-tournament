@@ -28,6 +28,7 @@ export default function Question({
       <input
         type="text"
         className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
+        value={questionName}
         onChange={inputChangeCallback}
         placeholder="What to name our band?"
       />
