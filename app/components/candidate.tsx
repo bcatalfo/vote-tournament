@@ -1,6 +1,6 @@
 export default function Candidate({ name, id }: { name: string; id: string }) {
   return (
-    <div className="border rounded-sm p-4">
+    <div className="border-2 rounded-md p-4">
       <li key={id}>
         <p className="flex flex-row ">
           <button className="p-1"> X </button>
