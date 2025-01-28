@@ -2,9 +2,10 @@ import { useState } from "react";
 import Candidate from "./candidate";
 import { bandNamesData } from "./data";
 
+var nextId = bandNamesData.length + 1;
+
 export default function MakeTournament() {
   const [candidateData, setCandidateData] = useState(bandNamesData);
-  var nextId = candidateData.length + 1;
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
       <div className="flex flex-row items-stretch">
