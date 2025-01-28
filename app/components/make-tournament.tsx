@@ -30,16 +30,13 @@ export default function MakeTournament() {
           Add
         </button>
       </div>
-      <div className="flex flex-col items-center py-4">
-        <ul>
-          {candidateData.toReversed().map((candidate) => (
-            <Candidate
-              name={candidate.name}
-              id={candidate.id}
-              deleteCallback={() => alert("Delete " + candidate.id)}
-            />
-          ))}
-        </ul>
+      <div className="grid grid-cols-1 gap-4 items-center py-4">
+        {candidateData.toReversed().map((candidate) => (
+          <Candidate
+            name={candidate.name}
+            deleteCallback={() => alert("Delete " + candidate.id)}
+          />
+        ))}
       </div>
     </div>
   );
