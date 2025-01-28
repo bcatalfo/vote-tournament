@@ -9,6 +9,7 @@ export default function MakeTournament() {
   const [candidateData, setCandidateData] = useState(bandNamesData);
   const [editingQuestion, setEditingQuestion] = useState(false);
   const [questionName, setQuestionName] = useState("What to name our band");
+  const [suggestion, setSuggestion] = useState("The Bagooleans Cubed");
 
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
@@ -23,6 +24,8 @@ export default function MakeTournament() {
         <input
           type="text"
           className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
+          value={suggestion}
+          onChange={(e) => setSuggestion(e.target.value)}
           placeholder="Type your suggestion here..."
         />
         <button
@@ -30,7 +33,7 @@ export default function MakeTournament() {
           onClick={() =>
             setCandidateData([
               ...candidateData,
-              { id: nextId++, name: "new thing!" },
+              { id: nextId++, name: suggestion },
             ])
           }
         >
