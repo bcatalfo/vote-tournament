@@ -33,7 +33,11 @@ export default function MakeTournament() {
       <div className="flex flex-col items-center py-4">
         <ul>
           {candidateData.toReversed().map((candidate) => (
-            <Candidate name={candidate.name} id={candidate.id.toString()} />
+            <Candidate
+              name={candidate.name}
+              id={candidate.id}
+              deleteCallback={() => alert("Delete " + candidate.id)}
+            />
           ))}
         </ul>
       </div>
