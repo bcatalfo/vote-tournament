@@ -23,15 +23,15 @@ export default function MakeTournament() {
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
       <Question props={props}></Question>
-      <div className="w-1/4 flex flex-col items-start p-4">
-        <h2 className="px-4 text-xl">Add options</h2>
-        <div className="flex px-4 w-full">
+      <div className="w-1/4 flex flex-col items-start px-4 py-2">
+        <h2 className="px-4 py-2 text-2xl">Contenders</h2>
+        <div className="flex px-4 w-full items-stretch">
           <input
             type="text"
             className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
             value={suggestion}
             onChange={(e) => setSuggestion(e.target.value)}
-            placeholder="Type your idea here..."
+            placeholder="Add a contender..."
           />
           <button
             className="p-2"
@@ -45,19 +45,19 @@ export default function MakeTournament() {
             Add
           </button>
         </div>
-      </div>
-      <div className="grid grid-cols-1 gap-4 items-center py-4">
-        {candidateData.toReversed().map((candidate) => (
-          <Candidate
-            name={candidate.name}
-            key={candidate.id}
-            deleteCallback={() =>
-              setCandidateData(
-                candidateData.filter(({ name, id }) => id != candidate.id)
-              )
-            }
-          />
-        ))}
+        <div className="grid grid-cols-1 gap-4 items-center p-4">
+          {candidateData.toReversed().map((candidate) => (
+            <Candidate
+              name={candidate.name}
+              key={candidate.id}
+              deleteCallback={() =>
+                setCandidateData(
+                  candidateData.filter(({ name, id }) => id != candidate.id)
+                )
+              }
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

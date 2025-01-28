@@ -37,8 +37,8 @@ function QuestionBody({ props }: { props: QuestionProps }) {
 
 export default function Question({ props }: { props: QuestionProps }) {
   return (
-    <div className="w-1/4 flex flex-col items-start p-4">
-      <h2 className="px-4 text-xl">Title</h2>
+    <div className="w-1/4 flex flex-col items-start px-4 py-2">
+      <h2 className="px-4 text-2xl">Tournament Name</h2>
       <div className="flex flex-row items-stretch">
         <QuestionBody props={props}></QuestionBody>
       </div>
