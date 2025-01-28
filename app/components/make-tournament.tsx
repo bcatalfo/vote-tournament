@@ -2,6 +2,7 @@ import { useState } from "react";
 import Candidate from "./candidate";
 import Question from "./question";
 import { bandNamesData } from "./data";
+import type { QuestionProps } from "./question";
 
 var nextId = bandNamesData.length + 1;
 
@@ -11,15 +12,17 @@ export default function MakeTournament() {
   const [questionName, setQuestionName] = useState("What to name our band");
   const [suggestion, setSuggestion] = useState("The Bagooleans Cubed");
 
+  let props: QuestionProps = {
+    questionName: questionName,
+    editingQuestion: editingQuestion,
+    editCallback: () => setEditingQuestion(true),
+    inputChangeCallback: (e) => setQuestionName(e.target.value),
+    submitCallback: () => setEditingQuestion(false),
+  };
+
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
-      <Question
-        questionName={questionName}
-        editingQuestion={editingQuestion}
-        editCallback={() => setEditingQuestion(true)}
-        inputChangeCallback={(e) => setQuestionName(e.target.value)}
-        submitCallback={() => setEditingQuestion(false)}
-      ></Question>
+      <Question props={props}></Question>
       <div className="w-1/4 flex py-4">
         <input
           type="text"

@@ -1,23 +1,19 @@
 import type { ChangeEventHandler } from "react";
 
-function QuestionBody({
-  questionName,
-  editingQuestion,
-  editCallback,
-  inputChangeCallback,
-  submitCallback,
-}: {
+export type QuestionProps = {
   questionName: string;
   editingQuestion: boolean;
   editCallback: () => void;
   inputChangeCallback: ChangeEventHandler<HTMLInputElement>;
   submitCallback: () => void;
-}) {
-  if (!editingQuestion) {
+};
+
+function QuestionBody({ props }: { props: QuestionProps }) {
+  if (!props.editingQuestion) {
     return (
       <>
-        <h1 className="text-xl p-4 font-bold">{questionName}</h1>
-        <button className="p-1" onClick={editCallback}>
+        <h1 className="text-xl p-4 font-bold">{props.questionName}</h1>
+        <button className="p-1" onClick={props.editCallback}>
           Edit
         </button>
       </>
@@ -28,39 +24,21 @@ function QuestionBody({
       <input
         type="text"
         className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
-        value={questionName}
-        onChange={inputChangeCallback}
+        value={props.questionName}
+        onChange={props.inputChangeCallback}
         placeholder="What to name our band?"
       />
-      <button className="p-2" onClick={submitCallback}>
+      <button className="p-2" onClick={props.submitCallback}>
         Submit
       </button>
     </>
   );
 }
 
-export default function Question({
-  questionName,
-  editingQuestion,
-  editCallback,
-  inputChangeCallback,
-  submitCallback,
-}: {
-  questionName: string;
-  editingQuestion: boolean;
-  editCallback: () => void;
-  inputChangeCallback: ChangeEventHandler<HTMLInputElement>;
-  submitCallback: () => void;
-}) {
+export default function Question({ props }: { props: QuestionProps }) {
   return (
     <div className="flex flex-row items-stretch">
-      <QuestionBody
-        questionName={questionName}
-        editingQuestion={editingQuestion}
-        editCallback={editCallback}
-        inputChangeCallback={inputChangeCallback}
-        submitCallback={submitCallback}
-      ></QuestionBody>
+      <QuestionBody props={props}></QuestionBody>
     </div>
   );
 }
