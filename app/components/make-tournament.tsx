@@ -16,6 +16,8 @@ export default function MakeTournament() {
         questionName={questionName}
         editingQuestion={editingQuestion}
         editCallback={() => setEditingQuestion(true)}
+        inputChangeCallback={(e) => setQuestionName(e.target.value)}
+        submitCallback={() => setEditingQuestion(false)}
       ></Question>
       <div className="w-1/4 flex py-4">
         <input

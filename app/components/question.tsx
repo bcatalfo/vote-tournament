@@ -1,11 +1,17 @@
+import type { ChangeEventHandler } from "react";
+
 export default function Question({
   questionName,
   editingQuestion,
   editCallback,
+  inputChangeCallback,
+  submitCallback,
 }: {
   questionName: string;
   editingQuestion: boolean;
   editCallback: () => void;
+  inputChangeCallback: ChangeEventHandler<HTMLInputElement>;
+  submitCallback: () => void;
 }) {
   if (!editingQuestion) {
     return (
@@ -22,9 +28,12 @@ export default function Question({
       <input
         type="text"
         className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
+        onChange={inputChangeCallback}
         placeholder="What to name our band?"
       />
-      <button className="p-2">Submit</button>
+      <button className="p-2" onClick={submitCallback}>
+        Submit
+      </button>
     </div>
   );
 }
