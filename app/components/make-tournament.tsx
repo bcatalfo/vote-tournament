@@ -24,11 +24,11 @@ export default function MakeTournament() {
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
       <Question props={props}></Question>
       <div className="w-1/4 flex flex-col items-start px-4 py-2">
-        <h2 className="px-4 py-2 text-2xl">Contenders</h2>
-        <div className="flex px-4 w-full items-stretch">
+        <h2 className="px-4 my-2 text-2xl">Contenders</h2>
+        <div className="flex px-4 w-full justify-stretch">
           <input
             type="text"
-            className="border-2 border-slate-200 rounded-md p-2 my-4 w-full"
+            className="border-2 border-slate-200 rounded-md p-2 mr-2 w-full"
             value={suggestion}
             onChange={(e) => setSuggestion(e.target.value)}
             placeholder="Add a contender..."
