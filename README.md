@@ -28,6 +28,9 @@ Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Islan
 - - Add a shuffle button to change the order of the candidates
 - - Add drag and dropping the candidates to change the order (?)
 - - Add multiple columns to show the different matchups
+- - Abstract away the list of candidates to a single component
+- - Make CandidateBody component
+- - Make CandidateProps type
 - Add page to vote against two choices
 - Deploy
 - Backend
