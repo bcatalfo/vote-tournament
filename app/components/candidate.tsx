@@ -4,12 +4,14 @@ export default function Candidate({
   deleteCallback,
   editCallback,
   submitCallback,
+  onInputChangeCallback,
 }: {
   name: string;
   editMode: boolean;
   deleteCallback: () => void;
   editCallback: () => void;
   submitCallback: () => void;
+  onInputChangeCallback: (s: string) => void;
 }) {
   if (editMode) {
     return (
@@ -19,6 +21,7 @@ export default function Candidate({
             type="text"
             className="flex-grow px-4 py-2 border-2 border-slate-200 rounded-md p-2 mr-2"
             value={name}
+            onChange={(e) => onInputChangeCallback(e.target.value)}
             placeholder="The Bagooleans"
           />
           <button onClick={submitCallback} className="p-1">

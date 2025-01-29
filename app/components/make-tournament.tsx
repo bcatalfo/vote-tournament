@@ -58,6 +58,16 @@ export default function MakeTournament() {
                 )
               }
               editCallback={() => setCandidateBeingEdited(candidate.id)}
+              onInputChangeCallback={(s) =>
+                setCandidateData(
+                  candidateData.map(({ name, id }) => {
+                    if (candidate.id == id) {
+                      return { name: s, id: id };
+                    }
+                    return { name: name, id: id };
+                  })
+                )
+              }
               submitCallback={() => setCandidateBeingEdited(-1)}
             />
           ))}
