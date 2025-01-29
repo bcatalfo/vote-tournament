@@ -1,12 +1,29 @@
 export default function Candidate({
   name,
+  editMode,
   deleteCallback,
   editCallback,
 }: {
   name: string;
+  editMode: boolean;
   deleteCallback: () => void;
   editCallback: () => void;
 }) {
+  if (editMode) {
+    return (
+      <div className="border-2 rounded-md px-4 py-2">
+        <p className="flex flex-row ">
+          <input
+            type="text"
+            className="flex-grow px-4 py-2 border-2 border-slate-200 rounded-md p-2 mr-2"
+            value={name}
+            placeholder="The Bagooleans"
+          />
+          <button className="p-1">Submit</button>
+        </p>
+      </div>
+    );
+  }
   return (
     <div className="border-2 rounded-md px-4 py-2">
       <p className="flex flex-row ">

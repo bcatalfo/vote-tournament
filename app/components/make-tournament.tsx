@@ -11,6 +11,7 @@ export default function MakeTournament() {
   const [editingQuestion, setEditingQuestion] = useState(false);
   const [questionName, setQuestionName] = useState("What to name our band");
   const [suggestion, setSuggestion] = useState("The Bagooleans Cubed");
+  const [candidateBeingEdited, setCandidateBeingEdited] = useState(-1);
 
   let props: QuestionProps = {
     questionName: questionName,
@@ -50,6 +51,7 @@ export default function MakeTournament() {
             <Candidate
               name={candidate.name}
               key={candidate.id}
+              editMode={candidate.id == candidateBeingEdited}
               deleteCallback={() =>
                 setCandidateData(
                   candidateData.filter(({ name, id }) => id != candidate.id)
