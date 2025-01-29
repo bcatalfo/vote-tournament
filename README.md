@@ -19,3 +19,13 @@ Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Islan
 # Check it out
 
 [Vote Tournament](http://votetournament.com)
+
+# TODOs
+
+- Make the home page look more profesh
+- Vote Tournament Page
+- - Make deleting a candidate require confirmation
+- - Add a shuffle button to change the order of the candidates
+- - Add drag and dropping the candidates to change the order (?)
+- - Add multiple columns to show the different matchups
+- Add page to vote against two choices
