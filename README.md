@@ -29,3 +29,6 @@ Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Islan
 - - Add drag and dropping the candidates to change the order (?)
 - - Add multiple columns to show the different matchups
 - Add page to vote against two choices
+- Deploy
+- Backend
+- - You should be able to generate a shareable link to send to your friends
