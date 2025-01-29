@@ -58,6 +58,7 @@ export default function MakeTournament() {
                 )
               }
               editCallback={() => setCandidateBeingEdited(candidate.id)}
+              submitCallback={() => setCandidateBeingEdited(-1)}
             />
           ))}
         </div>

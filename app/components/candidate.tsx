@@ -3,11 +3,13 @@ export default function Candidate({
   editMode,
   deleteCallback,
   editCallback,
+  submitCallback,
 }: {
   name: string;
   editMode: boolean;
   deleteCallback: () => void;
   editCallback: () => void;
+  submitCallback: () => void;
 }) {
   if (editMode) {
     return (
@@ -19,7 +21,9 @@ export default function Candidate({
             value={name}
             placeholder="The Bagooleans"
           />
-          <button className="p-1">Submit</button>
+          <button onClick={submitCallback} className="p-1">
+            Submit
+          </button>
         </p>
       </div>
     );
