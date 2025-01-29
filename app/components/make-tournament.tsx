@@ -55,6 +55,11 @@ export default function MakeTournament() {
                   candidateData.filter(({ name, id }) => id != candidate.id)
                 )
               }
+              editCallback={() =>
+                alert(
+                  `Editing candidate with name ${candidate.name} and id ${candidate.id}`
+                )
+              }
             />
           ))}
         </div>
