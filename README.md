@@ -24,13 +24,13 @@ Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Islan
 
 - Make the home page look more profesh
 - Vote Tournament Page
-- - Make deleting a candidate require confirmation (?)
+- - Add arrows to show matchups.
 - - Add a shuffle button to change the order of the candidates
 - - Add drag and dropping the candidates to change the order (?)
-- - Add multiple columns to show the different matchups
 - - Abstract away the list of candidates to a single component
 - - Make CandidateBody component
 - - Make CandidateProps type
+- - Make deleting a candidate require confirmation (?)
 - Add page to vote against two choices
 - Deploy
 - Backend
