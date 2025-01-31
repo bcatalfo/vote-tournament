@@ -3,6 +3,7 @@ import Candidate from "./candidate";
 import Question from "./question";
 import { bandNamesData } from "./data";
 import type { QuestionProps } from "./question";
+import Arrows from "./arrows";
 
 var nextId = bandNamesData.length + 1;
 
@@ -23,8 +24,8 @@ export default function MakeTournament() {
 
   return (
     <div className="container mx-auto my-auto text-center flex flex-col items-center">
-      <Question props={props}></Question>
-      <div className="w-1/4 flex flex-col items-start px-4 py-2">
+      <Question key={0} props={props}></Question>
+      <div className="w-full flex flex-col items-start px-4 py-2">
         <h2 className="px-4 my-2 text-2xl">Contenders</h2>
         <div className="flex px-4 w-full justify-stretch">
           <input
@@ -46,31 +47,36 @@ export default function MakeTournament() {
             Add
           </button>
         </div>
-        <div className="grid grid-cols-1 gap-4 items-center p-4">
-          {candidateData.toReversed().map((candidate) => (
-            <Candidate
-              name={candidate.name}
-              key={candidate.id}
-              editMode={candidate.id == candidateBeingEdited}
-              deleteCallback={() =>
-                setCandidateData(
-                  candidateData.filter(({ name, id }) => id != candidate.id)
-                )
-              }
-              editCallback={() => setCandidateBeingEdited(candidate.id)}
-              onInputChangeCallback={(s) =>
-                setCandidateData(
-                  candidateData.map(({ name, id }) => {
-                    if (candidate.id == id) {
-                      return { name: s, id: id };
-                    }
-                    return { name: name, id: id };
-                  })
-                )
-              }
-              submitCallback={() => setCandidateBeingEdited(-1)}
-            />
+        <div className="grid grid-cols-6 items-center p-4">
+          {candidateData.toReversed().map((candidate, i) => (
+            <>
+              <div className={`col-span-2 col-start-1 row-start-${i}`}>
+                <Candidate
+                  name={candidate.name}
+                  key={candidate.id}
+                  editMode={candidate.id == candidateBeingEdited}
+                  deleteCallback={() =>
+                    setCandidateData(
+                      candidateData.filter(({ name, id }) => id != candidate.id)
+                    )
+                  }
+                  editCallback={() => setCandidateBeingEdited(candidate.id)}
+                  onInputChangeCallback={(s) =>
+                    setCandidateData(
+                      candidateData.map(({ name, id }) => {
+                        if (candidate.id == id) {
+                          return { name: s, id: id };
+                        }
+                        return { name: name, id: id };
+                      })
+                    )
+                  }
+                  submitCallback={() => setCandidateBeingEdited(-1)}
+                />
+              </div>
+            </>
           ))}
+          <Arrows />
         </div>
       </div>
     </div>
