@@ -30,6 +30,7 @@ Then we first vote on Third Space vs Rum Punches, next we vote on Mythical Islan
 - - Abstract away the list of candidates to a single component
 - - Make CandidateBody component
 - - Make CandidateProps type
+- - Add example for voting to figure out what songs to play as a band
 - - Make deleting a candidate require confirmation (?)
 - Add page to vote against two choices
 - Deploy
